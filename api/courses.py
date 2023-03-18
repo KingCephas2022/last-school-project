@@ -11,7 +11,6 @@ class Course(db.Model):
     name = db.Column(db.String(100))
     course_code = db.Column(db.String(10), unique=True)
     credit_hours = db.Column(db.Integer, default=1) 
-    teacher_id = db.Column(db.Integer, db.ForeignKey('teachers.id'))
     created_at = db.Column(db.DateTime() , nullable=False , default=datetime.utcnow)
 
     def save(self):

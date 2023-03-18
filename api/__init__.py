@@ -6,9 +6,9 @@ from .conf.confi import config_dict
 from .utils import db
 from .courses import Course
 from .scores import Score
+from .student import Student
 from .user import User
 from flask_migrate import Migrate
-
 
 
 def create_app(config=config_dict['dev']):
@@ -46,8 +46,9 @@ def create_app(config=config_dict['dev']):
             'user': User,
             'Course': Course,
             'Score': Score,
+            'Student': Student
         }
        
-        return app
+    return app
 
     
